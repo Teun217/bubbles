@@ -1,13 +1,23 @@
 :root{
     --shapeDiv: 10em;
     --colorDiv: 10em;
-    --blobSpeed: 20s;
+    --blobSpeed: 15s;
+}
+
+@media (max-width: 600px){
+    section div:nth-child(n+12){
+        display: none;
+    }
+    :root{
+        --shapeDiv: 8em;
+        --colorDiv: 8em;
+    }
 }
 
 div {
     /* cursor: grab; */
     width: var(--shapeDiv);
-    height: var(--shapeDiv);
+    aspect-ratio: 1/1;
     border-radius: calc(var(--shapeDiv));
 }
 
@@ -75,14 +85,21 @@ section div:nth-child(3n + 2) div{
     background-color: rgb(255, 200, 0);
 }
 
+
+
 section div:nth-child(2n){
-    --colorDiv: 7em;
-    --shapeDiv: 7em;
+    width: calc(var(--shapeDiv)*1.25);
+}
+section div:nth-child(2n) div{
+    width: calc(var(--colorDiv)*1.25);
 }
 
 section div:nth-child(4n){
-    --colorDiv: 15em;
-    --shapeDiv: 15em;
+    width: calc(var(--shapeDiv)*0.75);
+}
+
+section div:nth-child(4n) div{
+    width: calc(var(--colorDiv)*0.75);
 }
 
 /* animation blobs */

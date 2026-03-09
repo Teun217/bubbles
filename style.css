@@ -49,7 +49,8 @@ div{
 }
 
 main {
-    /* filter: url(#noiseFilter); */
+    display: flex;
+    justify-content: center;
 }
 
 section > div{
@@ -57,12 +58,18 @@ section > div{
     flex: none;
 }
 
-main section{
+section{
     filter: url(#blobbify);
     display: flex;
     width: 100dvw;
     height: 10em;
     justify-content: space-evenly;
+}
+
+@media (min-width: 1200px){
+    main section{
+        width: 40dvw;
+    }
 }
 
 

@@ -15,6 +15,29 @@
     }
 }
 
+h1{
+    display: block;
+    position: absolute;
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    width: fit-content;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    font-size: 5em;
+    z-index: 100;
+
+    animation-name: disappearText;
+    animation-duration: 0.1s;
+    animation-delay: calc(var(--blobSpeed)*1.35);
+    /* getimed: op 40.5 sec, op blobSpeed 30 komt er geen 
+    bubbel in het midden langs, dus Blobspeed 40.5/30*blobspeed 
+    is wanneer de tekst kan verdwijnen  */
+    animation-fill-mode: forwards;
+
+}
+
 div {
     /* cursor: grab; */
     width: var(--shapeDiv);
@@ -213,6 +236,13 @@ section > div:nth-child(16){
         transform: translateY(80dvh);
     }
 }
+
+@keyframes disappearText {
+    0%{
+        opacity: 100%;
+    }100%{
+        opacity: 0%;
+}}
 
 
 

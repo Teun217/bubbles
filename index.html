@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Move and Morph</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- <script src="script.js" defer></script> -->
+</head>
+<body>
+    <main>
+        <section>
+            <div><div></div></div>
+            <div><div></div></div>
+            <div><div></div></div>
+            <div><div></div></div>
+            <div><div></div></div>
+            <div><div></div></div>
+            <div><div></div></div>
+            <div><div></div></div>
+            <div><div></div></div>
+            <div><div></div></div>
+            <div><div></div></div>
+            <div><div></div></div>
+            <div><div></div></div>
+            <div><div></div></div>
+            <div><div></div></div>
+            <div><div></div></div>
+            
+        </section>
+    </main>
+
+    <!-- FILTERS -->
+    <svg>
+        <defs>
+            <filter id="colorMerge" x="-50%" y="-50%" width="200%" height="200%">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="30"/>
+            </filter>
+        </defs>
+    </svg>
+
+    <svg>
+        <defs>
+            <filter id="blobbify" x="-50%" y="-50%" width="200%" height="200%">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="20" result="blur"/>
+                <!-- ^^ doet niks? -->
+                <feColorMatrix 
+                       mode="matrix" 
+                       values="
+                               1  0  0  0  0
+                               0  1  0  0  0
+                               0  0  1  0  0
+                               0  0  0  200  -100"
+                       result="blob" 
+                       />
+				<feBlend in="SourceGraphic" in2="blob" />
+            </filter>
+        </defs>
+    </svg>
+
+    <!-- chappie prompt: "I see some vague squares around the circles.
+I'm guessing this has something to do with the gaussian blur, but you explain to me what you think it is."
+ -->
+
+    <svg>
+        <filter id='noiseFilter'>
+            <feTurbulence 
+            type='fractalNoise' 
+            baseFrequency='0.5' 
+            numOctaves='3'/>
+
+        <feComposite in="SourceGraphic" in2="noise" operator="in" result="maskedNoise"/>
+        <feBlend in="SourceGraphic" in2="maskedNoise" mode="overlay"/>
+        </filter>
+    </svg>
+
+    <!-- BRON: svg filters -> sanne -->
+
+</body>
+</html>

@@ -1,0 +1,198 @@
+:root{
+    --shapeDiv: 10em;
+    --colorDiv: 10em;
+    --blobSpeed: 20s;
+}
+
+div {
+    /* cursor: grab; */
+    width: var(--shapeDiv);
+    height: var(--shapeDiv);
+    border-radius: calc(var(--shapeDiv));
+}
+
+div div {
+    width: 100%;
+    mix-blend-mode:multiply;
+}
+
+body{
+    width: 100dvw;
+    height: 100dvh;
+    margin: 0;
+    background-color: black;
+}
+
+main{
+    margin: 0;
+}
+
+/* section > div{
+    overflow: hidden;
+} */
+
+div{
+    display: grid;
+    place-items: center;
+    margin: 0 calc(var(--shapeDiv) * 0.5 * -1);
+}
+
+main {
+    /* filter: url(#noiseFilter); */
+}
+
+section > div{
+    display: block;
+    flex: none;
+}
+
+main section{
+    filter: url(#blobbify);
+    display: flex;
+    width: 100dvw;
+    height: 10em;
+    justify-content: space-evenly;
+}
+
+
+section div div{
+    filter: url(#colorMerge);
+    box-shadow: 
+    inset 0.25em 0.25em 0.5em #fff,
+    inset -0.25em -0.25em 0.5em #000;
+}
+
+section div:nth-child(3n) div{
+    background-color: rgb(255, 0, 0);
+    bottom: 0;
+}
+
+section div:nth-child(3n + 1) div{
+    background-color: rgb(255, 132, 0); 
+}
+
+section div:nth-child(3n + 2) div{
+    background-color: rgb(255, 200, 0);
+}
+
+section div:nth-child(2n){
+    --colorDiv: 7em;
+    --shapeDiv: 7em;
+}
+
+section div:nth-child(4n){
+    --colorDiv: 15em;
+    --shapeDiv: 15em;
+}
+
+/* animation blobs */
+section > div:first-child{
+    animation: --moveUpAndDown1 calc(var(--blobSpeed)*1.1) alternate cubic-bezier(.9,0,.57,1) infinite;
+    /* animation: --moveUpAndDown2 7s alternate cubic-bezier(0,1.71,1,-0.8) 1s infinite; */
+}
+
+section > div:nth-child(2){
+    animation: --moveUpAndDown1 calc(var(--blobSpeed)*1.2) alternate cubic-bezier(.9,0,.57,1) infinite;
+    /* animation: --moveUpAndDown2 7s alternate cubic-bezier(0,1.71,1,-0.8) 1s infinite; */
+}
+
+section > div:nth-child(3){
+    animation: --moveUpAndDown1 calc(var(--blobSpeed)*0.9) alternate cubic-bezier(.9,0,.57,1) infinite;
+    /* animation: --moveUpAndDown2 7s alternate cubic-bezier(0,1.71,1,-0.8) 1s infinite; */
+}
+
+section > div:nth-child(4){
+    animation: --moveUpAndDown1 calc(var(--blobSpeed)*1.3) alternate cubic-bezier(.9,0,.57,1) infinite;
+    /* animation: --moveUpAndDown2 7s alternate cubic-bezier(0,1.71,1,-0.8) 1s infinite; */
+}
+
+section > div:nth-child(5){
+    animation: --moveUpAndDown1 calc(var(--blobSpeed)*1.4) alternate cubic-bezier(.9,0,.57,1) infinite;
+    /* animation: --moveUpAndDown2 7s alternate cubic-bezier(0,1.71,1,-0.8) 1s infinite; */
+}
+
+section > div:nth-child(6){
+    animation: --moveUpAndDown1 calc(var(--blobSpeed)*0.8) alternate cubic-bezier(.9,0,.57,1) infinite;
+    /* animation: --moveUpAndDown2 7s alternate cubic-bezier(0,1.71,1,-0.8) 1s infinite; */
+}
+
+section > div:nth-child(7){
+    animation: --moveUpAndDown1 calc(var(--blobSpeed)*0.7) alternate cubic-bezier(.9,0,.57,1) infinite;
+    /* animation: --moveUpAndDown2 7s alternate cubic-bezier(0,1.71,1,-0.8) 1s infinite; */
+}
+
+section > div:nth-child(8){
+    animation: --moveUpAndDown1 calc(var(--blobSpeed)*0.5) alternate cubic-bezier(.9,0,.57,1) infinite;
+    /* animation: --moveUpAndDown2 7s alternate cubic-bezier(0,1.71,1,-0.8) 1s infinite; */
+}
+
+section > div:nth-child(9){
+    animation: --moveUpAndDown1 calc(var(--blobSpeed)*0.6) alternate cubic-bezier(.9,0,.57,1) infinite;
+    /* animation: --moveUpAndDown2 7s alternate cubic-bezier(0,1.71,1,-0.8) 1s infinite; */
+}
+
+section > div:nth-child(10){
+    animation: --moveUpAndDown1 calc(var(--blobSpeed)*1.15) alternate cubic-bezier(.9,0,.57,1) infinite;
+    /* animation: --moveUpAndDown2 7s alternate cubic-bezier(0,1.71,1,-0.8) 1s infinite; */
+}
+
+section > div:nth-child(11){
+    animation: --moveUpAndDown1 calc(var(--blobSpeed)*1.35) alternate cubic-bezier(.9,0,.57,1) infinite;
+    /* animation: --moveUpAndDown2 7s alternate cubic-bezier(0,1.71,1,-0.8) 1s infinite; */
+}
+
+section > div:nth-child(12){
+    animation: --moveUpAndDown1 calc(var(--blobSpeed)*0.85) alternate cubic-bezier(.9,0,.57,1) infinite;
+    /* animation: --moveUpAndDown2 7s alternate cubic-bezier(0,1.71,1,-0.8) 1s infinite; */
+}
+
+section > div:nth-child(13){
+    animation: --moveUpAndDown1 calc(var(--blobSpeed)*1.45) alternate cubic-bezier(.9,0,.57,1) infinite;
+    /* animation: --moveUpAndDown2 7s alternate cubic-bezier(0,1.71,1,-0.8) 1s infinite; */
+}
+
+section > div:nth-child(14){
+    animation: --moveUpAndDown1 calc(var(--blobSpeed)*1.25) alternate cubic-bezier(.9,0,.57,1) infinite;
+    /* animation: --moveUpAndDown2 7s alternate cubic-bezier(0,1.71,1,-0.8) 1s infinite; */
+}
+
+section > div:nth-child(15){
+    animation: --moveUpAndDown1 calc(var(--blobSpeed)*1.125) alternate cubic-bezier(.9,0,.57,1) infinite;
+    /* animation: --moveUpAndDown2 7s alternate cubic-bezier(0,1.71,1,-0.8) 1s infinite; */
+}
+
+section > div:nth-child(16){
+    animation: --moveUpAndDown1 calc(var(--blobSpeed)*0.65) alternate cubic-bezier(.9,0,.57,1) infinite;
+    /* animation: --moveUpAndDown2 7s alternate cubic-bezier(0,1.71,1,-0.8) 1s infinite; */
+}
+
+
+
+@keyframes --moveUpAndDown1 {
+    0%{
+        translate: 0 0;
+        filter: hue-rotate(-135deg);
+        filter: saturation(0%);
+    } 100%{
+        translate: 0 80dvh;
+        filter: hue-rotate(10deg);
+        filter: saturation(100%);
+    }
+}
+
+@keyframes --moveUpAndDown2 {
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(80dvh);
+    }
+}
+
+
+
+
+/* BRONNEN
+Marking: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/mask-image
+*/
+

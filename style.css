@@ -1,7 +1,8 @@
 :root{
     --shapeDiv: 10em;
     --colorDiv: 10em;
-    --blobSpeed: 15s;
+    --blobSpeed: 30s;
+    --animationBezier: .8,0,.60,1
 }
 
 @media (max-width: 600px){
@@ -104,83 +105,83 @@ section div:nth-child(4n) div{
 
 /* animation blobs */
 section > div:first-child{
-    animation: --moveUpAndDown1 calc(var(--blobSpeed)*1.1) alternate cubic-bezier(.9,0,.57,1) infinite;
-    /* animation: --moveUpAndDown2 7s alternate cubic-bezier(0,1.71,1,-0.8) 1s infinite; */
+    animation: --moveUpAndDown1 calc(var(--blobSpeed)*1.1) alternate cubic-bezier(var(--animationBezier)) infinite;
+
 }
 
 section > div:nth-child(2){
-    animation: --moveUpAndDown1 calc(var(--blobSpeed)*1.2) alternate cubic-bezier(.9,0,.57,1) infinite;
-    /* animation: --moveUpAndDown2 7s alternate cubic-bezier(0,1.71,1,-0.8) 1s infinite; */
+    animation: --moveUpAndDown1 calc(var(--blobSpeed)*1.2) alternate cubic-bezier(var(--animationBezier)) infinite;
+
 }
 
 section > div:nth-child(3){
-    animation: --moveUpAndDown1 calc(var(--blobSpeed)*0.9) alternate cubic-bezier(.9,0,.57,1) infinite;
-    /* animation: --moveUpAndDown2 7s alternate cubic-bezier(0,1.71,1,-0.8) 1s infinite; */
+    animation: --moveUpAndDown1 calc(var(--blobSpeed)*0.9) alternate cubic-bezier(var(--animationBezier)) infinite;
+
 }
 
 section > div:nth-child(4){
-    animation: --moveUpAndDown1 calc(var(--blobSpeed)*1.3) alternate cubic-bezier(.9,0,.57,1) infinite;
-    /* animation: --moveUpAndDown2 7s alternate cubic-bezier(0,1.71,1,-0.8) 1s infinite; */
+    animation: --moveUpAndDown1 calc(var(--blobSpeed)*1.3) alternate cubic-bezier(var(--animationBezier)) infinite;
+
 }
 
 section > div:nth-child(5){
-    animation: --moveUpAndDown1 calc(var(--blobSpeed)*1.4) alternate cubic-bezier(.9,0,.57,1) infinite;
-    /* animation: --moveUpAndDown2 7s alternate cubic-bezier(0,1.71,1,-0.8) 1s infinite; */
+    animation: --moveUpAndDown1 calc(var(--blobSpeed)*1.4) alternate cubic-bezier(var(--animationBezier)) infinite;
+
 }
 
 section > div:nth-child(6){
-    animation: --moveUpAndDown1 calc(var(--blobSpeed)*0.8) alternate cubic-bezier(.9,0,.57,1) infinite;
-    /* animation: --moveUpAndDown2 7s alternate cubic-bezier(0,1.71,1,-0.8) 1s infinite; */
+    animation: --moveUpAndDown1 calc(var(--blobSpeed)*0.8) alternate cubic-bezier(var(--animationBezier)) infinite;
+
 }
 
 section > div:nth-child(7){
-    animation: --moveUpAndDown1 calc(var(--blobSpeed)*0.7) alternate cubic-bezier(.9,0,.57,1) infinite;
-    /* animation: --moveUpAndDown2 7s alternate cubic-bezier(0,1.71,1,-0.8) 1s infinite; */
+    animation: --moveUpAndDown1 calc(var(--blobSpeed)*0.7) alternate cubic-bezier(var(--animationBezier)) infinite;
+
 }
 
 section > div:nth-child(8){
-    animation: --moveUpAndDown1 calc(var(--blobSpeed)*0.5) alternate cubic-bezier(.9,0,.57,1) infinite;
-    /* animation: --moveUpAndDown2 7s alternate cubic-bezier(0,1.71,1,-0.8) 1s infinite; */
+    animation: --moveUpAndDown1 calc(var(--blobSpeed)*0.5) alternate cubic-bezier(var(--animationBezier)) infinite;
+
 }
 
 section > div:nth-child(9){
-    animation: --moveUpAndDown1 calc(var(--blobSpeed)*0.6) alternate cubic-bezier(.9,0,.57,1) infinite;
-    /* animation: --moveUpAndDown2 7s alternate cubic-bezier(0,1.71,1,-0.8) 1s infinite; */
+    animation: --moveUpAndDown1 calc(var(--blobSpeed)*0.6) alternate cubic-bezier(var(--animationBezier)) infinite;
+
 }
 
 section > div:nth-child(10){
-    animation: --moveUpAndDown1 calc(var(--blobSpeed)*1.15) alternate cubic-bezier(.9,0,.57,1) infinite;
-    /* animation: --moveUpAndDown2 7s alternate cubic-bezier(0,1.71,1,-0.8) 1s infinite; */
+    animation: --moveUpAndDown1 calc(var(--blobSpeed)*1.15) alternate cubic-bezier(var(--animationBezier)) infinite;
+
 }
 
 section > div:nth-child(11){
-    animation: --moveUpAndDown1 calc(var(--blobSpeed)*1.35) alternate cubic-bezier(.9,0,.57,1) infinite;
-    /* animation: --moveUpAndDown2 7s alternate cubic-bezier(0,1.71,1,-0.8) 1s infinite; */
+    animation: --moveUpAndDown1 calc(var(--blobSpeed)*1.35) alternate cubic-bezier(var(--animationBezier)) infinite;
+
 }
 
 section > div:nth-child(12){
-    animation: --moveUpAndDown1 calc(var(--blobSpeed)*0.85) alternate cubic-bezier(.9,0,.57,1) infinite;
-    /* animation: --moveUpAndDown2 7s alternate cubic-bezier(0,1.71,1,-0.8) 1s infinite; */
+    animation: --moveUpAndDown1 calc(var(--blobSpeed)*0.85) alternate cubic-bezier(var(--animationBezier)) infinite;
+
 }
 
 section > div:nth-child(13){
-    animation: --moveUpAndDown1 calc(var(--blobSpeed)*1.45) alternate cubic-bezier(.9,0,.57,1) infinite;
-    /* animation: --moveUpAndDown2 7s alternate cubic-bezier(0,1.71,1,-0.8) 1s infinite; */
+    animation: --moveUpAndDown1 calc(var(--blobSpeed)*1.45) alternate cubic-bezier(var(--animationBezier)) infinite;
+
 }
 
 section > div:nth-child(14){
-    animation: --moveUpAndDown1 calc(var(--blobSpeed)*1.25) alternate cubic-bezier(.9,0,.57,1) infinite;
-    /* animation: --moveUpAndDown2 7s alternate cubic-bezier(0,1.71,1,-0.8) 1s infinite; */
+    animation: --moveUpAndDown1 calc(var(--blobSpeed)*1.25) alternate cubic-bezier(var(--animationBezier)) infinite;
+
 }
 
 section > div:nth-child(15){
-    animation: --moveUpAndDown1 calc(var(--blobSpeed)*1.125) alternate cubic-bezier(.9,0,.57,1) infinite;
-    /* animation: --moveUpAndDown2 7s alternate cubic-bezier(0,1.71,1,-0.8) 1s infinite; */
+    animation: --moveUpAndDown1 calc(var(--blobSpeed)*1.125) alternate cubic-bezier(var(--animationBezier)) infinite;
+
 }
 
 section > div:nth-child(16){
-    animation: --moveUpAndDown1 calc(var(--blobSpeed)*0.65) alternate cubic-bezier(.9,0,.57,1) infinite;
-    /* animation: --moveUpAndDown2 7s alternate cubic-bezier(0,1.71,1,-0.8) 1s infinite; */
+    animation: --moveUpAndDown1 calc(var(--blobSpeed)*0.65) alternate cubic-bezier(var(--animationBezier)) infinite;
+
 }
 
 

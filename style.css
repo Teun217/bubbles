@@ -67,7 +67,7 @@ section{
 }
 
 @media (min-width: 1000px){
-    main section{
+    section{
         width: 40dvw;
     }
 }
